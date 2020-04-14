@@ -1,2 +1,46 @@
-＜チャット画面＞
+.main-chat
+  .main-chat__group-info
+    .main-chat__group-info__infos
+      %p.infos-group
+        your group
+      %a.infos-member
+        Member: masa
+    .main-chat__group-info__btn
+      %li= link_to "Edit", "#", class:"editbtn"
 
+  .main-chat__message-list
+    .main-chat__message-list__lists
+      .listx
+        .list-upper
+          .namex
+            masa1
+          .timex
+            nowTime1
+        .messagex
+          messages1
+      .listx
+        .list-upper
+          .namex
+            masa2
+          .timex
+            nowTime2
+        .messagex
+          messages2
+      .listx
+        .list-upper
+          .namex
+            masa3
+          .timex
+            nowTime3
+        .messagex
+          messages3
+
+  .main-chat__message-form
+    .main-chat__message-form__former
+      .input-form
+        %input.input-text{name: "ur;", placeholder: "type a message", type: "text", value: ""}
+        %label{class: "input-file"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "file-text"}
+      .input-btn
+        %input.submit-btn{type:"submit", value:"Send"}

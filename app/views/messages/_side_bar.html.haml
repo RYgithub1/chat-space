@@ -1,1 +1,30 @@
-＜サイドバー＞
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__side-box
+      %p.boxname
+        masa
+      %ul.menu
+        %li= link_to "", "#", class:"editx far fa-edit"
+        %li= link_to "", "#", class:"cogx fa fa-cog"
+
+  .side-bar__group-list
+    .group
+      %p.own-group
+        your group1
+      %a.own-message
+        まだメッセージがありません１
+    .group
+      %p.own-group
+        your group2
+      %a.own-message
+        まだメッセージがありません２
+    .group
+      %p.own-group
+        your group3
+      %a.own-message
+        まだメッセージがありません３
+    .group
+      %p.own-group
+        your group4
+      %a.own-message
+        まだメッセージがありません４
