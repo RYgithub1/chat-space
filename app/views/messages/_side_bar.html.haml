@@ -1,19 +1,13 @@
--# ＜サイドバー＞
-
 .side-bar
   .side-bar__user-name
     .side-bar__user-name__side-box
       %p.boxname
         masa
       %ul.menu
-        -# %li= link_to 'new', "#", class:"far fa-edit"
-        -# %li= link_to 'edit', "#", class:"fa fa-cog"
         %li= link_to "", "#", class:"editx far fa-edit"
         %li= link_to "", "#", class:"cogx fa fa-cog"
 
   .side-bar__group-list
-    -# .side-bar__group-list__group-name  不要
-    -# a/pではpadmarに違和感だ出る→親クラスgroupを作成→css
     .group
       %p.own-group
         your group1
