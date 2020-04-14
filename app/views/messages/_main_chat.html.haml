@@ -10,37 +10,37 @@
 
   .main-chat__message-list
     .main-chat__message-list__lists
-      %div.listx
-        %div.list-upper
-          %div.namex
+      .listx
+        .list-upper
+          .namex
             masa1
-          %div.timex
+          .timex
             nowTime1
-        %div.messagex
+        .messagex
           messages1
-      %div.listx
-        %div.list-upper
-          %div.namex
+      .listx
+        .list-upper
+          .namex
             masa2
-          %div.timex
+          .timex
             nowTime2
-        %a.messagex
+        .messagex
           messages2
-      %div.listx
-        %div.list-upper
-          %div.namex
+      .listx
+        .list-upper
+          .namex
             masa3
-          %a.timex
+          .timex
             nowTime3
-        %a.messagex
+        .messagex
           messages3
 
   .main-chat__message-form
     .main-chat__message-form__former
-      %div.input-form
+      .input-form
         %input.input-text{name: "ur;", placeholder: "type a message", type: "text", value: ""}
         %label{class: "input-file"}
           = icon('fas', 'image')
           %input{type: "file", class: "file-text"}
-      %div.input-btn
+      .input-btn
         %input.submit-btn{type:"submit", value:"Send"}
