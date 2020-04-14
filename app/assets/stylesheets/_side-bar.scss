@@ -1,0 +1,85 @@
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.side-bar {
+  $color-white: #ffffff;
+
+  background-color: #253141;
+  width: 300px;
+  // box-sizing: border-box;
+  &__user-name {
+    background-color: #253141;
+    height: 100px;
+    padding-top: 40px;
+
+    &__side-box {
+      // background-color: #d8d8d8;
+      margin: 0px 20px;
+      // padding-top: 40px;
+      // padding-bottom:40px;
+      line-height: 20px;
+      list-style: none;
+      width: 260px;
+      height: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .boxname {
+        font-size: 16px;
+        // float: left;
+        color: $color-white;
+      }
+      a {
+        text-decoration: none;
+        // margin-left: 10px;
+        // 差し引きmargin-right:5px;
+        color: $color-white;
+        font-style: bold;
+        // float: right;
+        padding-left: 10px;
+      }
+      .menu {
+        // float: right;
+        width: 60px;
+        line-height: 20px;
+        display: flex;
+        justify-content: space-between;
+        // text-decoration: none;
+        // margin-right: 5px;
+        // color: #ffffff;
+        .editx {
+          margin-right: 5px;
+        }
+        // .cogx {
+        //   margin-left: 5px;
+        // }
+      }
+    }
+  }
+
+  &__group-list {
+    background-color: #2f3e51;
+    height: calc(100% - 100px);
+    // margin-bottom: 40px;
+
+    .group {
+      color: $color-white;
+      font-style: bold;
+      margin: 0px 20px;
+      padding-top: 20px;
+      // TODO:40px入らない
+      // align-items: center;
+      // margin-bottom: 40px;
+      // box-sizing: border-box;
+      .own-group {
+        font-size: 15px;
+      }
+      .own-message {
+        font-size: 11px;
+      }
+    }
+  }
+}
