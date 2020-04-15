@@ -62,3 +62,4 @@ gem "font-awesome-sass"
 #   gem 'devise'
 # end
 gem "devise"
+gem "pry-rails"
