@@ -55,3 +55,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "haml-rails"
 gem "font-awesome-sass"
+
+
+# 特定の環境下での使用に制限の場合
+# group :development do
+#   gem 'devise'
+# end
+gem "devise"

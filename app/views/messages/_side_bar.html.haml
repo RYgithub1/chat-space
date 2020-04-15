@@ -2,10 +2,13 @@
   .side-bar__user-name
     .side-bar__user-name__side-box
       %p.boxname
-        masa
+        -# masa
+        = current_user.name
       %ul.menu
         %li= link_to "", "#", class:"editx far fa-edit"
-        %li= link_to "", "#", class:"cogx fa fa-cog"
+        -# %li= link_to "", "#", class:"cogx fa fa-cog"
+        %li= link_to "", edit_user_path(current_user), class:"cogx fa fa-cog"
+
 
   .side-bar__group-list
     .group
