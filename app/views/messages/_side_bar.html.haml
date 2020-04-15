@@ -5,29 +5,41 @@
         -# masa
         = current_user.name
       %ul.menu
-        %li= link_to "", "#", class:"editx far fa-edit"
-        -# %li= link_to "", "#", class:"cogx fa fa-cog"
-        %li= link_to "", edit_user_path(current_user), class:"cogx fa fa-cog"
+        %li
+          = link_to "", new_group_path, class:"editx far fa-edit"
+        %li
+          = link_to "", edit_user_path(current_user), class:"cogx fa fa-cog"
 
 
   .side-bar__group-list
-    .group
-      %p.own-group
-        your group1
-      %a.own-message
-        まだメッセージがありません１
-    .group
-      %p.own-group
-        your group2
-      %a.own-message
-        まだメッセージがありません２
-    .group
-      %p.own-group
-        your group3
-      %a.own-message
-        まだメッセージがありません３
-    .group
-      %p.own-group
-        your group4
-      %a.own-message
-        まだメッセージがありません４
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#", class: "linkx" do
+          %p.own-group
+            = group.name
+          %a.own-message
+            まだメッセージがありません１
+
+
+  -# .side-bar__group-list
+  -#   .group
+  -#     %p.own-group
+  -#       your group1
+  -#     %a.own-message
+  -#       まだメッセージがありません１
+
+  -#   .group
+  -#     %p.own-group
+  -#       your group2
+  -#     %a.own-message
+  -#       まだメッセージがありません２
+  -#   .group
+  -#     %p.own-group
+  -#       your group3
+  -#     %a.own-message
+  -#       まだメッセージがありません３
+  -#   .group
+  -#     %p.own-group
+  -#       your group4
+  -#     %a.own-message
+  -#       まだメッセージがありません４
