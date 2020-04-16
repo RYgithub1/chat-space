@@ -63,3 +63,8 @@ gem "font-awesome-sass"
 # end
 gem "devise"
 gem "pry-rails"
+
+gem "carrierwave"
+gem "mini_magick"
+# gem 'libv8' 以下２つ不要→ node.jsインストール
+# gem 'therubyracer', '~> 0.12.3'
