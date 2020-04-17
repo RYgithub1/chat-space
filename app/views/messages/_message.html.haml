@@ -1,0 +1,25 @@
+
+.listx
+  .list-upper
+    .list-upper__user-name
+      = message.user.name
+    .list-upper__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .messagex
+    - if message.content.present?
+      %p.messagex__content
+        = message.content
+    = image_tag message.image.url, class: 'messagex__image' if message.image.present?
+
+
+-# .message
+-#   .upper-message
+-#     .upper-message__user-name
+-#       = message.user.name
+-#     .upper-message__date
+-#       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+-#   .lower-message
+-#     - if message.content.present?
+-#       %p.lower-message__content
+-#         = message.content
+-#     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

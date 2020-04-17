@@ -9,16 +9,15 @@
           = link_to "", new_group_path, class:"editx far fa-edit"
         %li
           = link_to "", edit_user_path(current_user), class:"cogx fa fa-cog"
-
-
   .side-bar__group-list
     - current_user.groups.each do |group|
       .group
-        = link_to "#", class: "linkx" do
-          %p.own-group
+        = link_to group_messages_path(group), class: "linkx" do
+          .own-group
             = group.name
-          %a.own-message
-            まだメッセージがありません１
+          .own-message
+            = group.show_last_message
+
 
 
   -# .side-bar__group-list
@@ -27,19 +26,3 @@
   -#       your group1
   -#     %a.own-message
   -#       まだメッセージがありません１
-
-  -#   .group
-  -#     %p.own-group
-  -#       your group2
-  -#     %a.own-message
-  -#       まだメッセージがありません２
-  -#   .group
-  -#     %p.own-group
-  -#       your group3
-  -#     %a.own-message
-  -#       まだメッセージがありません３
-  -#   .group
-  -#     %p.own-group
-  -#       your group4
-  -#     %a.own-message
-  -#       まだメッセージがありません４
