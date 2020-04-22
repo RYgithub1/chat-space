@@ -2,18 +2,11 @@
   .main-chat__group-info
     .main-chat__group-info__infos
       .infos-group
-        -# .side-bar__group-list
-        -# .main-chat__group-list
         .nandemoyosagena-classname-koko-kakuyo
           = @group.name
       .infos-member
-        -# Member: masa
         - @group.users.each do |user|
-          -# = user.group_ids
           = user.name
-
-
-
     .main-chat__group-info__btn
       %li= link_to "Edit", edit_group_path(current_user), class:"editbtn"
 
@@ -21,6 +14,7 @@
     .main-chat__message-list__lists
       .messages
         = render partial: 'message', collection: @messages
+
   .main-chat__message-form
     = form_for [@group, @message] do |f|
       .main-chat__message-form__former
@@ -34,45 +28,3 @@
           = f.submit 'Send', class: "submit-btn"
 
 
-
--# - current_user.groups.each do |group|
--#       .group
--#         = link_to group_messages_path(group), class: "linkx" do
--#           .own-group
--#             = group.name
--#           .own-message
--#             = group.show_last_message
-      -# .listx
-      -#   .list-upper
-      -#     .namex
-      -#       masa1
-      -#     .timex
-      -#       nowTime1
-      -#   .messagex
-      -#     messages1
--# .listx
--#   .list-upper
--#     .namex
--#       masa2
--#     .timex
--#       nowTime2
--#   .messagex
--#     messages2
--# .listx
--#   .list-upper
--#     .namex
--#       masa3
--#     .timex
--#       nowTime3
--#   .messagex
--# .former
--# = form_for [@group, @message] do |f|
--# .main-chat__message-form
--#   .main-chat__message-form__former
--#     .input-form
--#       %input.input-text{name: "ur;", placeholder: "type a message", type: "text", value: ""}
--#       %label{class: "input-file"}
--#         = icon('fas', 'image', class: "icon")
--#         %input{type: "file", class: "file-text"}
--#     .input-btn
--#       %input.submit-btn{type:"submit", value:"Send"}
