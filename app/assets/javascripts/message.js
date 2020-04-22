@@ -53,34 +53,14 @@ $(function () {
     })
       .done(function (data) {
         var html = buildHTML(data);
-        // $(".main-chat__message-list__lists").append(html);
         $(".messages").append(html);
         $(".main-chat__message-list").animate({
           scrollTop: $(".main-chat__message-list")[0].scrollHeight,
         });
-
-        // .animate({
-        // scrollTop: $(".messages")[0].scrollHeight,
-        // });
-        // $(".main-chat__message-list__lists").animate({
-        // scrollTop: $(".main-chat__message-list__lists")[0].scrollHeight,
-        // });
-        // $(".messages").animate({
-        // scrollTop: $(".messages")[0].scrollHeight,
-        // });
-
         // $("#message_content").val("");
         // $("#imageのセレクタ").val("");
-        // FIXME: formタグ全体を指定 .reset通った！
-        // $("#new_messgae")[0].reset();
-        // $("#message_content")[0].reset();
-        // $(".input-form")[0].reset();
-        // $(".main-chat__message-form__former")[0].reset();
-        // $(".main-chat__message-form")[0].reset();
+        // TODO: formタグ全体を指定で.reset通った！テキストではresetだが、val()でも可能ゆえ残置
         $("form")[0].reset();
-
-        // $(".submit-btn").removeAttr("disabled");
-        // $(".input-btn").prop("disabled", false);
         $(".submit-btn").prop("disabled", false);
       })
       .fail(function () {
@@ -88,11 +68,3 @@ $(function () {
       });
   });
 });
-
-// <input
-//   class="input-text"
-//   placeholder="type a message"
-//   type="text"
-//   name="message[content]"
-//   id="message_content"
-// ></input>;

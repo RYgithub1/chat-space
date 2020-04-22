@@ -17,7 +17,6 @@
     list-style: none;
     &__infos {
       background-color: white;
-      // FIXME:
       align-items: center;
       margin-top: 35px;
       margin-left: 40px;
@@ -55,10 +54,8 @@
         align-items: center;
         margin: 0px 0px 20px 40px;
         padding-top: 35px;
-        // overflow: scroll;
         .list-upper {
           display: flex;
-          // overflow: scroll;
         }
         .list-upper__user-name {
           color: $color-darkblue;
