@@ -48,13 +48,17 @@
   &__message-list {
     background-color: #fafafa;
     height: calc(100vh - 190px);
+    overflow: scroll;
+
     &__lists {
       .listx {
         align-items: center;
         margin: 0px 0px 20px 40px;
         padding-top: 35px;
+        // overflow: scroll;
         .list-upper {
           display: flex;
+          // overflow: scroll;
         }
         .list-upper__user-name {
           color: $color-darkblue;
