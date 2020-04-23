@@ -16,5 +16,9 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+
+
 # 画像はGitHubで管理する必要が無い
 public/uploads/*
+# secrets.ymlは各種パスワードを扱うためのファイル
+config/secrets.yml

@@ -85,3 +85,5 @@ gem "carrierwave"
 gem "mini_magick"
 # gem 'libv8' 以下２つ不要→ node.jsインストール
 # gem 'therubyracer', '~> 0.12.3'
+
+gem 'fog-aws'
