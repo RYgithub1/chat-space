@@ -30,7 +30,7 @@
         text-decoration: none;
         color: $color-white;
         font-style: bold;
-        padding-left: 10px;
+        // padding-left: 10px;
       }
       .menu {
         width: 60px;
@@ -39,6 +39,7 @@
         justify-content: space-between;
         .editx {
           margin-right: 5px;
+          margin-left: 30px;
         }
       }
     }
@@ -51,6 +52,7 @@
       color: $color-white;
       font-style: bold;
       margin: 0px 20px;
+      margin-bottom: 20px;
       padding-top: 20px;
       .linkx {
         color: white;
