@@ -87,3 +87,5 @@ gem "mini_magick"
 # gem 'therubyracer', '~> 0.12.3'
 
 gem 'fog-aws'
+gem 'turbolinks', '~> 5.2.0'
+
