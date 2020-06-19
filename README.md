@@ -1,40 +1,76 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+---
 
-Things you may want to cover:
+## Contents
 
-- Ruby version
+### App
 
-- System dependencies
+> chat space
 
-- Configuration
+### Tecknology
 
-- Database creation
+- Ruby
+- Rails
+- Javascript
+- HTML/HAML
+- CSS/SCSS
+- Git
+- MySQL
+- AWS
 
-- Database initialization
+---
 
-- How to run the test suite
+## DB 設計
 
-- Services (job queues, cache servers, search engines, etc.)
+### users Table
 
-- Deployment instructions
+| Column   | Type   | Options                   |
+| -------- | ------ | ------------------------- |
+| name     | string | null: false, index: true  |
+| email    | string | null: false, unique: true |
+| password | string | null: false               |
 
-- ...
+##### Association
 
-## group_users テーブル
+- has_many :groups, through: :group_users
+- has_many :group_users
+- has_many :messages
+
+### group_users Table
 
 | Column   | Type    | Options                        |
 | -------- | ------- | ------------------------------ |
 | user_id  | integer | null: false, foreign_key: true |
 | group_id | integer | null: false, foreign_key: true |
 
-## Association
+##### Association
 
-- belongs_to :group
 - belongs_to :user
+- belongs_to :group
 
-## 実験センテンス
+### groups Table
 
-->start to build
+| Column | Type   | Options                  |
+| ------ | ------ | ------------------------ |
+| name   | string | null: false, index: true |
+
+##### Association
+
+- has_many :users, through: :group_users
+- has_many :group_users
+- has_many :messages
+
+### messages Table
+
+| Column   | Type    | Options                        |
+| -------- | ------- | ------------------------------ |
+| content  | text    |                                |
+| image    | string  |                                |
+| user_id  | integer | null: false, foreign_key: true |
+| group_id | integer | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :group
